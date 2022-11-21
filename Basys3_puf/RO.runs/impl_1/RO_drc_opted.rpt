@@ -1,0 +1,106 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Mon Nov  7 17:51:30 2022
+| Host         : DESKTOP-6RIHC61 running 64-bit major release  (build 9200)
+| Command      : report_drc -file RO_drc_opted.rpt -pb RO_drc_opted.pb -rpx RO_drc_opted.rpx
+| Design       : RO
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 9
++----------+----------+-----------------------------------------------------+------------+
+| Rule     | Severity | Description                                         | Violations |
++----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| LUTLP-2  | Warning  | Combinatorial Loop Allowed                          | 8          |
++----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+LUTLP-2#1 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro1/feedback_inst, ro1/w1_inferred_i_1, ro1/w2_inferred_i_1,
+ro1/w3_inferred_i_1, ro1/w4_inferred_i_1, ro1/w5_inferred_i_1,
+ro1/w6_inferred_i_1, ro1/w7_inferred_i_1, ro1/w8_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#2 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro2/feedback_inst, ro2/w1_inferred_i_1, ro2/w2_inferred_i_1,
+ro2/w3_inferred_i_1, ro2/w4_inferred_i_1, ro2/w5_inferred_i_1,
+ro2/w6_inferred_i_1, ro2/w7_inferred_i_1, ro2/w8_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#3 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro3/feedback_inst, ro3/w1_inferred_i_1, ro3/w2_inferred_i_1,
+ro3/w3_inferred_i_1, ro3/w4_inferred_i_1, ro3/w5_inferred_i_1,
+ro3/w6_inferred_i_1, ro3/w7_inferred_i_1, ro3/w8_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#4 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro4/feedback_inst, ro4/w1_inferred_i_1, ro4/w2_inferred_i_1,
+ro4/w3_inferred_i_1, ro4/w4_inferred_i_1, ro4/w5_inferred_i_1,
+ro4/w6_inferred_i_1, ro4/w7_inferred_i_1, ro4/w8_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#5 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro5/feedback_inst, ro5/w1_inferred_i_1, ro5/w2_inferred_i_1,
+ro5/w3_inferred_i_1, ro5/w4_inferred_i_1, ro5/w5_inferred_i_1,
+ro5/w6_inferred_i_1, ro5/w7_inferred_i_1, ro5/w8_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#6 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro6/feedback_inst, ro6/w1_inferred_i_1, ro6/w2_inferred_i_1,
+ro6/w3_inferred_i_1, ro6/w4_inferred_i_1, ro6/w5_inferred_i_1,
+ro6/w6_inferred_i_1, ro6/w7_inferred_i_1, ro6/w8_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#7 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro7/feedback_inst, ro7/w1_inferred_i_1, ro7/w2_inferred_i_1,
+ro7/w3_inferred_i_1, ro7/w4_inferred_i_1, ro7/w5_inferred_i_1,
+ro7/w6_inferred_i_1, ro7/w7_inferred_i_1, ro7/w8_inferred_i_1.
+Related violations: <none>
+
+LUTLP-2#8 Warning
+Combinatorial Loop Allowed  
+9 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: ro8/feedback_inst, ro8/w1_inferred_i_1, ro8/w2_inferred_i_1,
+ro8/w3_inferred_i_1, ro8/w4_inferred_i_1, ro8/w5_inferred_i_1,
+ro8/w6_inferred_i_1, ro8/w7_inferred_i_1, ro8/w8_inferred_i_1.
+Related violations: <none>
+
+
